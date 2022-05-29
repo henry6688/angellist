@@ -1,0 +1,34 @@
+Prompt
+~~~~~~
+
+An angry investor sent us a note about how they keep getting squeezed down to $25K per deal even
+though their requested amount is $100K. Underneath the hood, this was because there's limited
+allocation (low supply) and a high volume of investors looking to invest (high demand). How should
+we communicate this to an investor in a way that minimizes the damage to our relationship with
+the investor?
+
+In addition, can you think of a better way we could change the proration basis logic so that
+this could potentially happen less often?
+
+Response
+~~~~~~~~
+
+we should explain to the customer politely that this is because we have to distribute the total allocation pool 'fairly'
+to many investors who are interested. And the way we are doing it now is according to each
+investor's historical average amount.
+
+The biggest problem with the current protation logic is that the big investors (those with a high historical average amount)
+always get a larger cut among all aggressive investors. This will cause the big investor gets bigger and those small investors
+can hardly take a cut (unless they start investing in low demand start ups first to improve their historical average amount)
+
+We could try these approaches:
+   1. Instead weight by historical amount, we could weight by 'request amount'.
+      i.e.: all aggressive investors get remain_allocation_amount * their requested amount / total request amount
+      so if someone really want to invest, just submit a high request amount.
+
+   2. Assign some priority to investors (i.e.: by their membership status, total fund committed, etc....)
+      Then distribute fund by this priority rank
+
+   3. If we really want to stick with weighting by historical invested amount, we could 'bucket' it.
+      i.e.: between 100K - 500K give a value of 1, 500K-1M a value of 2, etc...  Weight by this value.
+      This way, if two investors falls in the same bucket, they will be given equal amount.

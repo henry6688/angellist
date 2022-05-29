@@ -1,0 +1,18 @@
+Prompt
+~~~~~~
+
+Suppose we discover a bug with our algorithm and investors for two deals had incorrect
+allocations. This means that some of the investors ended up investing more than they were allowed to
+while others invested less than they were allowed to. One of deals happened two years ago and the
+other one happened two weeks ago. Please describe, in detail, how would you go about correcting this
+issue and how would you communicate this to the affected customers.
+
+Response
+~~~~~~~~
+For the deals happened two years ago, I am not so sure if we still need to reach out.
+Anyways, assume we do. I will think the under allocated investors will be more angry when they find out.
+Assuming reallocating is NOT possible, (since we have to honor it, otherwise the over allocated investors will be furious too).
+We could do nothing with the over allocated investor since they got the long end of the stick anyways.
+For the under allocated investors, we need to apologize first AND tell them that we can give them 'priority'
+during next fund-raising round for those deals. i.e. Guarantee they can invest X amount first. X = their under allocated gap * multiplier
+
